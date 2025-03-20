@@ -1,10 +1,10 @@
 import React from "react";
 
-function Moviecard({ movie }) {
-  function onFavoriteClick() {
-    console.log("Button Clicked!!");
-  }
+function onFavoriteClick() {
+  console.log("Button Clicked!!");
+}
 
+const Moviecard = ({ movie }) => {
   return (
     <div className="movie-card">
       <div className="movie-poster">
@@ -21,6 +21,6 @@ function Moviecard({ movie }) {
       </div>
     </div>
   );
-}
+};
 
 export default Moviecard;
