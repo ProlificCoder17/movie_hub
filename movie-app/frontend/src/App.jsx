@@ -1,22 +1,17 @@
 import "./App.css";
 import Moviecard from "./components/Moviecard";
-import Home from "./pages/Home"
+import Favorite from "./pages/Favorites";
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  const movieNum = 1;
-
   return (
-    <div>
-      <header>
-        <h1>MovieHub Database </h1>
-      </header>
-      <main>
-        {movieNum === 1 &&
-        <Moviecard movie={{ title: "The Book", release_date: "2025" }} />
-        }
-        <Home />
-      </main>
-    </div>
+    <main className="main-content">
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/favorites" element={<Favorites />}></Route>
+      </Routes>
+    </main>
   );
 }
 
