@@ -2,7 +2,7 @@ import React from "react";
 import Moviecard from "../components/Moviecard";
 import { useState } from "react";
 
-const Home = () => {
+function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const movies = [

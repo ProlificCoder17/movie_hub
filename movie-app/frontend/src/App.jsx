@@ -1,17 +1,26 @@
-import "./App.css";
+import "./css/App.css";
 import Moviecard from "./components/Moviecard";
 import Favorites from "./pages/Favorites";
 import Home from "./pages/Home";
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <main className="main-content">
+    <div>
+      <NavBar />
+      <main className="main-content">
       <Routes>
-        <Route path="/home" element={<Home />} />
+         {/* Define Home route explicitly */}
+         <Route path="/" element={<Home />} />
         <Route path="/favorites" element={<Favorites />} />
+        {/* Fallback route for undefined paths */}
+        <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </main>
+
+    </div>
+    
   );
 }
 
